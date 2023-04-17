@@ -1,0 +1,40 @@
+name: "💡 Funktions-Anfrage"
+description: Erstelle ein neues Ticket für eine neue Funktionsanfrage
+title: "💡 [FUNKTION] - <Titel>"
+labels: [
+  "enhancement"
+]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: "Name"
+      description: Gebe der Funktion einen Namen
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorität"
+      description: Wählen Sie die Priorität Ihrer Funktionsanfrage aus.
+      options:
+        - "Niedrig"
+        - "Mittel"
+        - "Hoch"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Zusammenfassung"
+      description: Geben Sie eine kurze Erklärung der Funktion an
+    validations:
+      required: true
+  - type: textarea
+    id: unresolved_question
+    attributes:
+      label: "Unbeantwortete Fragen"
+      description: Welche Fragen sind noch offen?
+    validations:
+      required: false
+

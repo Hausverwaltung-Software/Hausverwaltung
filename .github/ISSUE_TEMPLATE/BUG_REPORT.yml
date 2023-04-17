@@ -1,0 +1,60 @@
+name: "🐛 Bug Report"
+description: Erstelle ein neues Ticket für einen neuen Bug-Report
+title: "🐛 [BUG] - <Titel>"
+labels: [
+  "bug"
+]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Schwerwiegend"
+      description: Wie schwerwiegend ist das Problem?
+      options:
+        - "Niedrig"
+        - "Mittel"
+        - "Hoch"
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: "Seite"
+      description: Auf welcher Seite tritt das Problem auf?
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: "Umgebung"
+      description: Gib die Umgebung an, in der der Bug aufgetreten ist (z.B. Betriebssystem, Gerät, Version)
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Zusammenfassung"
+      description: Gib eine kurze Zusammenfassung des Bugs an
+    validations:
+      required: true
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "Schritte zur Reproduktion"
+      description: Gib die Schritte an, um den Bug zu reproduzieren
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: "Erwartetes Ergebnis"
+      description: Gib an, was das erwartete Ergebnis sein sollte
+    validations:
+      required: true
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: "Tatsächliches Ergebnis"
+      description: Gib an, was das tatsächliche Ergebnis ist
+    validations:
+      required: true
